@@ -1,0 +1,32 @@
+{
+  "name": "deejii-server",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && export NODE_ENV='production' && node dist/server/app",
+    "dev": "npm run build && export NODE_ENV='development' && npm run watch",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf dist",
+    "compile": "tsc -p ./",
+    "compile:dev": "tsc -w -p ./",
+    "watch:server": "nodemon dist/server/app",
+    "watch": "run-p compile:dev watch:server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vseppala/deejii.git"
+  },
+  "author": "Ville Seppälä <ville@villeseppala.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vseppala/deejii/issues"
+  },
+  "homepage": "https://github.com/vseppala/deejii#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.2",
+    "typescript": "^2.1.4"
+  }
+}

@@ -1,0 +1,9 @@
+# dependencies
+node_modules/
+typings/
+
+# Logs
+*.log
+
+# Build directory
+dist/

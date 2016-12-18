@@ -10,7 +10,7 @@
     "clean": "rm -rf dist",
     "compile": "tsc -p ./",
     "dev": "export NODE_ENV='development' && nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec --compilers ts:ts-node/register src/**/*.spec.ts"
   },
   "repository": {
     "type": "git",

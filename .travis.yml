@@ -14,4 +14,4 @@ env:
   - TEST_DIR=server
 
 script:
-  - cd $TEST_DIR && yarn install && npm test
+  - cd $TEST_DIR && yarn && npm test

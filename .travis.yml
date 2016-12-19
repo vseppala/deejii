@@ -11,5 +11,8 @@ install:
   - npm install -g yarn
   - yarn install
 
+env:
+  - TEST_DIR=server
+
 script:
-  - npm test
+  - cd $TEST_DIR && npm test
